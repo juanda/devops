@@ -1,3 +1,6 @@
+Conceptos Generales
+-------------------
+
 En el master hay que habilitar los binary logs y definir un número único
 de servidor.
 
@@ -38,13 +41,13 @@ GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%.mydomain.com';
 
 3. Obtener las coordenadas actuales del log-bin. Hay que parar las
 inserciones y actualizaciones, obtener las coordenadas y hacer
-   snapshot antes de volver a permitirlas de nuevo.
+snapshot antes de volver a permitirlas de nuevo.
 
-FLUSH TABLES WITH READ LOCK
+   FLUSH TABLES WITH READ LOCK
 
 cuidado que si salimos del cliente en el que hemos lanzado la instrucción
 se vuelven a desbloquear las actualizaciones e insercione, así que en una
 nueva sesión de mysql se obtienen las coordenadas:
 
- SHOW MASTER STATUS
+   SHOW MASTER STATUS
 

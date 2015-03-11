@@ -72,6 +72,7 @@ CHANGE MASTER TO MASTER_HOST='12.34.56.789',MASTER_USER='slave_user', MASTER_PAS
 SHOW SLAVE STATUS\G
 SHOW FUNCTION STATUS;
 SHOW PROCEDURE STATUS;
+SHOW TRIGGERS;
 
 mysqldump -uroot -p --routines --no-create-info --no-data --no-create-db --skip-opt aluni_new
 

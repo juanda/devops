@@ -74,6 +74,8 @@ SHOW FUNCTION STATUS;
 SHOW PROCEDURE STATUS;
 SHOW TRIGGERS;
 
+## Exportar sólo procedimientos almacenados
+
 mysqldump -uroot -p --routines --no-create-info --no-data --no-create-db --skip-opt aluni_new
 
 
